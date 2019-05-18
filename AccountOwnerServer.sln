@@ -1,6 +1,7 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28714.193
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountOwnerServer", "AccountOwnerServer\AccountOwnerServer.csproj", "{73FB08B8-4033-4116-B3AC-EC8253B024D4}"
 EndProject
@@ -13,6 +14,36 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{CC0B1C81-CB8A-412C-BD48-BCBC3F1A1CD0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{89CF5113-7F84-40B8-A81C-B918F00183AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integration", "Integration\Integration.csproj", "{2B68CC46-C6F0-4B9A-B90D-950C60DBDFA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D3804F02-F50C-4E36-86C9-CACA591AB352}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.gitignore = .gitignore
+		docker-compose.integration.yml = docker-compose.integration.yml
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+		Dockerfile.Integration = Dockerfile.Integration
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{C9B50F08-80DD-4B99-9AD6-F0C1137D7F64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TeamCity", "TeamCity", "{F86AD08F-2001-4F4D-AC93-B0BCDBAA61B3}"
+	ProjectSection(SolutionItems) = preProject
+		Infrastructure\TeamCity\docker-compose-many-agents.yml = Infrastructure\TeamCity\docker-compose-many-agents.yml
+		Infrastructure\TeamCity\docker-compose.yml = Infrastructure\TeamCity\docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Registry", "Registry", "{0E9F0A4F-1286-47FF-B80E-5BB6403F6D6F}"
+	ProjectSection(SolutionItems) = preProject
+		Infrastructure\Registry\docker-compose.yml = Infrastructure\Registry\docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "agent", "agent", "{90DC9EF6-0BA9-4165-B86B-1EF9540EFEBE}"
+	ProjectSection(SolutionItems) = preProject
+		Infrastructure\TeamCity\agent\Dockerfile = Infrastructure\TeamCity\agent\Dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,9 +127,26 @@ Global
 		{89CF5113-7F84-40B8-A81C-B918F00183AD}.Release|x64.Build.0 = Release|Any CPU
 		{89CF5113-7F84-40B8-A81C-B918F00183AD}.Release|x86.ActiveCfg = Release|Any CPU
 		{89CF5113-7F84-40B8-A81C-B918F00183AD}.Release|x86.Build.0 = Release|Any CPU
+		{2B68CC46-C6F0-4B9A-B90D-950C60DBDFA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B68CC46-C6F0-4B9A-B90D-950C60DBDFA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B68CC46-C6F0-4B9A-B90D-950C60DBDFA3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2B68CC46-C6F0-4B9A-B90D-950C60DBDFA3}.Debug|x64.Build.0 = Debug|Any CPU
+		{2B68CC46-C6F0-4B9A-B90D-950C60DBDFA3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2B68CC46-C6F0-4B9A-B90D-950C60DBDFA3}.Debug|x86.Build.0 = Debug|Any CPU
+		{2B68CC46-C6F0-4B9A-B90D-950C60DBDFA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B68CC46-C6F0-4B9A-B90D-950C60DBDFA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B68CC46-C6F0-4B9A-B90D-950C60DBDFA3}.Release|x64.ActiveCfg = Release|Any CPU
+		{2B68CC46-C6F0-4B9A-B90D-950C60DBDFA3}.Release|x64.Build.0 = Release|Any CPU
+		{2B68CC46-C6F0-4B9A-B90D-950C60DBDFA3}.Release|x86.ActiveCfg = Release|Any CPU
+		{2B68CC46-C6F0-4B9A-B90D-950C60DBDFA3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F86AD08F-2001-4F4D-AC93-B0BCDBAA61B3} = {C9B50F08-80DD-4B99-9AD6-F0C1137D7F64}
+		{0E9F0A4F-1286-47FF-B80E-5BB6403F6D6F} = {C9B50F08-80DD-4B99-9AD6-F0C1137D7F64}
+		{90DC9EF6-0BA9-4165-B86B-1EF9540EFEBE} = {F86AD08F-2001-4F4D-AC93-B0BCDBAA61B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86DE07EE-BE1C-4AAB-ADAA-224170CF42B0}

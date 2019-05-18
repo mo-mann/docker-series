@@ -15,3 +15,8 @@ publish
 /.vs
 /AccountOwnerServer/internallog.txt
 /AccountOwnerServer/*.user
+
+
+**/*.user
+**/*_logfile.txt
+
